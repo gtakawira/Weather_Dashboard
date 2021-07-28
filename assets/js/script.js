@@ -100,7 +100,7 @@ function currentWeather( d ) {
 	var temperature = Math.round(((parseFloat(d.main.temp))));
   var humidity = d.main.humidity; 
   var windspeed=d.wind.speed
-  var iconic='<img src=http://openweathermap.org/img/wn/'+d.weather[0].icon+'@2x.png>'
+  var iconic='<img src=https://openweathermap.org/img/wn/'+d.weather[0].icon+'@2x.png>'
   
 	
   document.getElementById('location').innerHTML = d.name+ ' ' + date+' '+iconic;
