@@ -138,7 +138,7 @@ for (i=1;i<6; i++){
   var date=moment(new Date(data.daily[i].dt*1000)).format("MM/DD/YYYY");
 	var temperature ='Temp: ' +Math.round(((parseFloat(data.daily[i].temp.day))))+ 'F&deg';
   var humidity ='Humidity: '+data.daily[i].humidity+'%'; 
-  var iconic='<img src=http://openweathermap.org/img/wn/'+data.daily[i].weather[0].icon+'@2x.png>'
+  var iconic='<img src=https://openweathermap.org/img/wn/'+data.daily[i].weather[0].icon+'@2x.png>'
  
     
   var card='<div class=fcast><h2>'+date+'</h2> <div>'+temperature+'</div><div>'+humidity+'</div><div>'+iconic+'</div></div>'
