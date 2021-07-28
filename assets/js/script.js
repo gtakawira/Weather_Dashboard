@@ -15,8 +15,7 @@ function formSubmitHandler(event) {
   if (cityname) {
     getlonglat(cityname);
     searched.push(cityname);
-  console.log(searched);
-  localStorage.setItem('searched',JSON.stringify(searched));
+    localStorage.setItem('searched',JSON.stringify(searched));
   displaysearched()
         
   } else {
@@ -34,10 +33,7 @@ function  getlonglat(parameter) {
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          
-          
-          console.log(data)
-          currentWeather(data)
+          currentWeather(data);
           getweather(data.coord.lon,data.coord.lat)
          });
       } else {
@@ -56,11 +52,9 @@ function  getweather(long,lat) {
  fetch(apiUrl)
    .then(function (response) {
      if (response.ok) {
-       response.json().then(function (data) {
-        console.log(data)
-        futureWeather(data);
-        })
-        }
+      response.json().then(function (data) {
+      futureWeather(data);
+      })}
 })}
 
 //pull local storage 
